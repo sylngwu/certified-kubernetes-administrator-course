@@ -102,11 +102,11 @@ In this section, we will take a look at the below
     ```
     $ kubectl get pods
     ```
-    - To explain the replicaset
-      ---
-      $ kubectl explain replicaset
-      ---
-   
+  - To explain the replicaset
+    ```
+    $ kubectl explain replicaset
+    ```
+    
     ![rs1](../../images/rs1.PNG)
     
 ## Labels and Selectors
