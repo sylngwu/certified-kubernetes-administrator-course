@@ -57,7 +57,10 @@ In this section, we will take a look at kubernetes deployments
   $ kubectl get all
   ```
   ![deployment2](../../images/deployment2.PNG)
-  
+
+
+  <img width="437" alt="image" src="https://github.com/user-attachments/assets/b25e88bd-d796-41ea-93f4-f38db185e308" />
+
 K8s Reference Docs:
 - https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 - https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/
