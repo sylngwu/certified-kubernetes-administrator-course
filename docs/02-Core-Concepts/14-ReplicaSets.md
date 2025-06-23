@@ -153,6 +153,10 @@ In this section, we will take a look at the below
   ```
   $ kubectl scale --replicas=6 replicaset myapp-replicaset
   ```
+ - Fourth way is to use **`kubectl scale`** command with type and name
+  ```
+  $ kubectl scale replicaset-definition --replicas=6
+  ```
   ![rs2](../../images/rs2.PNG)
 
 #### K8s Reference Docs:
