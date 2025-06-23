@@ -63,3 +63,22 @@ K8s Reference Docs:
 - https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/
 - https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/
 - https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/
+
+
+https://kubernetes.io/docs/reference/kubectl/conventions/
+Create an NGINX Pod
+kubectl run nginx --image=nginx
+Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
+kubectl run nginx --image=nginx --dry-run=client -o yaml
+Create a deployment
+kubectl create deployment --image=nginx nginx
+Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml
+Generate Deployment YAML file (-o yaml). Don’t create it(–dry-run) and save it to a file.
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml
+Make necessary changes to the file (for example, adding more replicas) and then create the deployment.
+kubectl create -f nginx-deployment.yaml
+
+
+From <https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14937836#overview> ![image](https://github.com/user-attachments/assets/1e29545b-e2d9-497b-a694-ed6b59ddafe4)
+
