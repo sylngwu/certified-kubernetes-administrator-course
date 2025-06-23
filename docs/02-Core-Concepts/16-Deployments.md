@@ -80,5 +80,4 @@ Make necessary changes to the file (for example, adding more replicas) and then 
 kubectl create -f nginx-deployment.yaml
 
 
-From <https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14937836#overview> ![image](https://github.com/user-attachments/assets/1e29545b-e2d9-497b-a694-ed6b59ddafe4)
 
