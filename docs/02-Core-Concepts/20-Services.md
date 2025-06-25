@@ -95,7 +95,25 @@ In this section we will take a look at **`services`** in kubernetes
     
  1. LoadBalancer
     - Where the service provisions a **`loadbalancer`** for our application in supported cloud providers.
-    
+
+
+## One-liner kubectl commands - (handy for the CKA when you need something fast without writing YAML)
+
+## NodePort – choose nodePort 30080, map to containerPort 80
+kubectl create service nodeport my-nodeport-svc --tcp=80:80 \
+  --node-port=30080 --dry-run=client -o yaml | kubectl apply -f -
+
+## ClusterIP – the default type, so no extra flag
+kubectl create service clusterip my-clusterip-svc --tcp=80:80 \
+  --dry-run=client -o yaml | kubectl apply -f -
+
+## LoadBalancer – works if your cluster/cloud supports it (or MetalLB on-prem)
+kubectl create service loadbalancer my-lb-svc --tcp=80:80 \
+  --dry-run=client -o yaml | kubectl apply -f -
+
+## Tip for the exam
+The --dry-run=client -o yaml trick prints the YAML you’re about to create, letting you pipe it straight into kubectl apply -f - (stdin) or into a file for editing.
+
 K8s Reference Docs:
 - https://kubernetes.io/docs/concepts/services-networking/service/
 - https://kubernetes.io/docs/tutorials/kubernetes-basics/expose/expose-intro/
